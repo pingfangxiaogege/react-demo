@@ -1,15 +1,15 @@
 import * as React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-const Demo = React.lazy(() => import('@/pages/demo'))
-const MobXDemo = React.lazy(() => import('./pages/mobx-demo'))
+const home = React.lazy(() => import('../pages/home'));
+const workList = React.lazy(() => import('../pages/work-list'));
 
 export default function routers() {
   return <>
     <React.Suspense fallback={<div>loading...</div>}>
       <Switch>
-        <Route path="/" exact component={ Demo } />
-        <Route path="/mobx" exact component={ MobXDemo } />
+        <Route path="/" exact component={ home } />
+        <Route path="/work-list" exact component={ workList } />
       </Switch>
     </React.Suspense>
   </>
