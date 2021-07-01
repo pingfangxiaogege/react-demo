@@ -1,13 +1,10 @@
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
-import Routers from '../router';
+import Layouts from '../layouts';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routers />
-      </BrowserRouter>
+      <Layouts></Layouts>
     </div>
   );
 }
